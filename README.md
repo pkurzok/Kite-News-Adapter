@@ -26,17 +26,24 @@ dependencies: [
 ## Usage
 The adapter currently provides three main functions for accessing Kagi News:
 
-```swift
-import KiteNewsAdapter
+ ```swift
+ let adapter = KiteNewsAdapter()
 
-let adapter = KiteNewsAdapter()
+ // Fetch the latest news badge
+ let badge = try await adapter.fetchLatestNewsBadge()
+ print("Total articles: \(badge.totalArticles)")
 
-// 1. Fetch the latest news badge (summary information)
-let badge = try await adapter.fetchLatestNewsBadge()
+ // Fetch available categories
+ let categories = try await adapter.fetchLatestCategories()
+ for category in categories {
+     print("\(category.categoryName): \(category.clusterCount) clusters")
+ }
 
-// 2. Fetch all available news categories
-let categories = try await adapter.fetchLatestCategories()
-
-// 3. Fetch stories for a specific category
-let stories = try await adapter.fetchStories(forCategory: category.id)
-```
+ // Fetch stories for a specific category
+ if let firstCategory = categories.first {
+     let stories = try await adapter.fetchStories(forBadge: badge, andCategory: firstCategory)
+     for story in stories {
+         print(story.title)
+     }
+ }
+ ```
