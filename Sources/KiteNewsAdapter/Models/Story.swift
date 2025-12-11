@@ -62,69 +62,69 @@ public struct QnA: Decodable {
 
 // MARK: - Story
 
-public struct Story: Decodable {
+public struct Story: Decodable, Identifiable {
     public let id: String
-    public let clusterNumber: Int
-    public let uniqueDomains: Int
-    public let numberOfTitles: Int
-    public let sourceLanguage: String
-    public let category: String
+//    public let clusterNumber: Int
+//    public let uniqueDomains: Int
+//    public let numberOfTitles: Int
+//    public let sourceLanguage: String
+//    public let category: String
     public let title: String
     public let shortSummary: String
-    public let didYouKnow: String?
-    public let talkingPoints: [String]
-    public let quote: String?
-    public let quoteAuthor: String?
-    public let quoteAttribution: String?
-    public let quoteSourceUrl: String?
-    public let quoteSourceDomain: String?
-    public let location: String?
-    public let perspectives: [Perspective]
-    public let emoji: String
-    public let historicalBackground: String?
-    public let internationalReactions: [String]
-    public let timeline: [TimelineEvent]
-    public let technicalDetails: [String]
-    public let userActionItems: [String]
-    public let industryImpact: [String]
-    public let suggestedQna: [QnA]
-    public let primaryImage: StoryImage?
-    public let secondaryImage: StoryImage?
-    public let articles: [Article]
-    public let domains: [Domain]
-    public let selectedLanguage: String
+//    public let didYouKnow: String?
+//    public let talkingPoints: [String]
+//    public let quote: String?
+//    public let quoteAuthor: String?
+//    public let quoteAttribution: String?
+//    public let quoteSourceUrl: String?
+//    public let quoteSourceDomain: String?
+//    public let location: String?
+//    public let perspectives: [Perspective]
+//    public let emoji: String
+//    public let historicalBackground: String?
+//    public let internationalReactions: [String]
+//    public let timeline: [TimelineEvent]
+//    public let technicalDetails: [String]
+//    public let userActionItems: [String]
+//    public let industryImpact: [String]
+//    public let suggestedQna: [QnA]
+//    public let primaryImage: StoryImage?
+//    public let secondaryImage: StoryImage?
+//    public let articles: [Article]
+//    public let domains: [Domain]
+//    public let selectedLanguage: String
     
     enum CodingKeys: String, CodingKey {
         case id
-        case clusterNumber = "cluster_number"
-        case uniqueDomains = "unique_domains"
-        case numberOfTitles = "number_of_titles"
-        case sourceLanguage
-        case category
         case title
         case shortSummary = "short_summary"
-        case didYouKnow = "did_you_know"
-        case talkingPoints = "talking_points"
-        case quote
-        case quoteAuthor = "quote_author"
-        case quoteAttribution = "quote_attribution"
-        case quoteSourceUrl = "quote_source_url"
-        case quoteSourceDomain = "quote_source_domain"
-        case location
-        case perspectives
-        case emoji
-        case historicalBackground = "historical_background"
-        case internationalReactions = "international_reactions"
-        case timeline
-        case technicalDetails = "technical_details"
-        case userActionItems = "user_action_items"
-        case industryImpact = "industry_impact"
-        case suggestedQna = "suggested_qna"
-        case primaryImage = "primary_image"
-        case secondaryImage = "secondary_image"
-        case articles
-        case domains
-        case selectedLanguage
+        //        case clusterNumber = "cluster_number"
+        //        case uniqueDomains = "unique_domains"
+        //        case numberOfTitles = "number_of_titles"
+        //        case sourceLanguage
+        //        case category
+//        case didYouKnow = "did_you_know"
+//        case talkingPoints = "talking_points"
+//        case quote
+//        case quoteAuthor = "quote_author"
+//        case quoteAttribution = "quote_attribution"
+//        case quoteSourceUrl = "quote_source_url"
+//        case quoteSourceDomain = "quote_source_domain"
+//        case location
+//        case perspectives
+//        case emoji
+//        case historicalBackground = "historical_background"
+//        case internationalReactions = "international_reactions"
+//        case timeline
+//        case technicalDetails = "technical_details"
+//        case userActionItems = "user_action_items"
+//        case industryImpact = "industry_impact"
+//        case suggestedQna = "suggested_qna"
+//        case primaryImage = "primary_image"
+//        case secondaryImage = "secondary_image"
+//        case articles
+//        case domains
+//        case selectedLanguage
     }
 }
 
